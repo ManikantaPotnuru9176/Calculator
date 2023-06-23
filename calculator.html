@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .button {background-color: rgb(31, 182, 202);
+                     border: none;
+                     color: white;
+                     padding: 15px 32px;
+                     text-align: center;
+                     font-size: 16px;
+                    }
+            body {background-image: linear-gradient(gray,rgb(67, 218, 218));}
+        </style>
+    </head>
+    <body>
+        <form style="padding-top: 50;"> 
+            <table align="center" cellpadding="10" border="1" style="background-color: aqua;">
+                <tr><td colspan="3"><input type="text" name="dispaly" id="display" size="36" value="0" style="padding-top: 30px;"></td>
+                <td><input type="text" name="operator" id="operator" size="5" style="padding-top: 30px;"></td></tr>
+                <tr><td colspan="2"><input type="button" name="bodmas" id="bodmas" value="BODMAS" onclick="Bodmas();">&emsp;<input type="button" name="indicate" id="indicate" style="background-color: white;"></td>
+                <td><input type="button" name="cancel" id="cancel" value="   &#10096;&#10096;&#10096;  " onclick="delete_back();"></td>
+                <td><input type="button" name="left_brace" id="left_brace" value="(" onclick="l_brace();"><input type="button" name="right_brace" id="right_brace" value=")" onclick="r_brace();"><input type="button" name="of" id="of" value="of" onclick="OF();"></td></tr>
+                <tr><td><input type="button" name="7" id="7" class="button" value="7" onclick="seven_7();"></td>
+                <td><input type="button" name="8" id="8" class="button" value="8" onclick="eight_8();"></td>
+                <td><input type="button" name="9" id="9" class="button" value="9" onclick="nine_9();"></td>
+                <td><input type="button" name="/" id="/" class="button" value="/" onclick="divi();"></td></tr>
+                <tr><td><input type="button" name="4" id="4" class="button" value="4" onclick="four_4();"></td>
+                <td><input type="button" name="5" id="5" class="button" value="5" onclick="five_5();"></td>
+                <td><input type="button" name="6" id="6" class="button" value="6" onclick="six_6();"></td>
+                <td><input type="button" name="*" id="*" class="button" value="*" onclick="multi();"></td></tr>
+                <tr><td><input type="button" name="1" id="1" class="button" value="1" onclick="one_1();"></td>
+                <td><input type="button" name="2" id="2" class="button" value="2" onclick="two_2();"></td>
+                <td><input type="button" name="3" id="3" class="button" value="3" onclick="three_3();"></td>
+                <td><input type="button" name="-" id="-" class="button" value="-" onclick="minus();"></td></tr>
+                <tr><td><input type="button" name="00" id="00" class="button" value="00" style="padding-right: 23px;" onclick="zeroes_00();"></td>
+                <td><input type="button" name="0" id="0" class="button" value="0" onclick="zero_0();"></td>
+                <td><input type="button" name="." id="." class="button" value="."></td>
+                <td><input type="button" name="+" id="+" class="button" value="+" style="padding-right: 28px;" onclick="plus();"></td></tr>
+                <tr><td colspan="3"><input type="button" name="=" id="=" class="button" value="=" style="padding-right: 230px;" onclick="equals();"></td>
+                <td><input type="reset" name="ac" id="ac" class="button" value="AC" style="padding-right: 16px; text-align: center;" onclick="ac_0();"></td></tr>
+            </table>
+        </form>
+        <h2 id="explain"> Explaination: </h2>
+    </body>
+    <script src="calculator.js"></script>
+</html>
